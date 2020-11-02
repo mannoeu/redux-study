@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import { addCourse, removeCourse } from "./courses.utils";
 
 const INITIAL_STATE = {
   data: [
@@ -27,12 +28,12 @@ function CoursesReducer(state = INITIAL_STATE, action) {
     case "ADD_COURSE":
       return {
         ...state,
-        data: [...state.data, { id: uuidv4(), ...action.course }],
+        data: addCourse(state.data, action.payload),
       };
     case "REMOVE_COURSE":
       return {
         ...state,
-        data: [],
+        data: removeCourse(state.data, action.payload),
       };
     default:
       return state;

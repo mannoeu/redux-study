@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-import CoursesReducer from "./courses.reducer";
+import CoursesReducer from "./courses/courses.reducer";
 
 const persistConfig = {
   key: "@root-shop",

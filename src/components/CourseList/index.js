@@ -13,11 +13,11 @@ function CourseList() {
 
   /* Action Creator */
   function addCourseAction(title, description) {
-    return { type: "ADD_COURSE", course: { title, description } };
+    return { type: "ADD_COURSE", payload: { title, description } };
   }
 
   function removeCourseAction(id) {
-    return { type: "REMOVE_COURSE", id };
+    return { type: "REMOVE_COURSE", payload: id };
   }
 
   function addCourse(event) {
