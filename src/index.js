@@ -8,7 +8,7 @@ import { store, persistor } from "./store";
 
 ReactDOM.render(
   <Provider store={store}>
-    <PersistGate persistor={persistor}>
+    <PersistGate persistor={persistor} loading={null}>
       <React.StrictMode>
         <App />
       </React.StrictMode>

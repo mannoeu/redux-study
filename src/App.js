@@ -1,12 +1,12 @@
 import React from "react";
 import GlobalStyle from "./global";
 
-import CourseList from "./components/CourseList";
+import QuoteList from "./components/QuoteList";
 
 function App() {
   return (
     <>
-      <CourseList />
+      <QuoteList />
       <GlobalStyle />
     </>
   );

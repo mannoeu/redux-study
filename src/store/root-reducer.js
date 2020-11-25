@@ -2,16 +2,16 @@ import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-import CoursesReducer from "./courses/courses.reducer";
+import QuotesReducer from "./quotes/quotes.reducer";
 
 const persistConfig = {
-  key: "@root-shop",
+  key: "@root-quotes",
   storage,
-  whitelist: ["courses"],
+  whitelist: ["quotes"],
 };
 
 const rootReducer = combineReducers({
-  courses: CoursesReducer,
+  quotes: QuotesReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);
